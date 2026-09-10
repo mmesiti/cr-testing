@@ -56,7 +56,7 @@ in writing automated tests.
 
    15 min ; :doc:`motivation`
    25 min ; :doc:`locally`
-   30 min ; :doc:`continuous-integration`
+   30 min ; :doc:`cloud`
    30 min ; :doc:`test-design`
    5 min ; :doc:`conclusions`
 
@@ -67,7 +67,7 @@ in writing automated tests.
 
    motivation
    locally
-   continuous-integration
+   cloud
    test-design
    conclusions
    full-cycle-ci

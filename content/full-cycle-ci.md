@@ -8,10 +8,10 @@
 
 ## Exercise a full-cycle collaborative workflow
 
-This exercise is a collaborative version of the [Automated testing exercise](./continuous-integration).
+This exercise is a collaborative version of the [Automated testing exercise](./cloud).
 
 ```{exercise} FullCI-1: Create and use a continuous integration workflow on GitHub or GitLab with pull requests and issues
-This is an expanded version of the {doc}`automated testing demonstration <continuous-integration>`.
+This is an expanded version of the {doc}`automated testing demonstration on the cloud <cloud>`.
 The exercise is performed in a collaborative circle within the exercise group
 (breakout room).
 

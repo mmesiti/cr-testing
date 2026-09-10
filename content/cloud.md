@@ -1,4 +1,4 @@
-# Automated testing and "Continuous Integration"
+# Automated testing in the Cloud 
 
 ```{questions}
 - How can we implement automatic testing each time we push changes to the repository?
@@ -12,26 +12,12 @@ GitLab CI - you can choose which one to use and instructions are provided for bo
 
 ```{note} 
 
-## What is Continuous integration?
-
-From [Wikipedia](https://en.wikipedia.org/wiki/Continuous_integration):
-
->    *Continuous integration (CI) is the practice 
->    of integrating source code changes frequently 
->    and ensuring that the integrated codebase is in a workable state.*
-
-By extension
-the expression **Continous Integration** is also commonly used
-to mean the automation *tools* that facilitate the practice.
-
-````
-
 This exercise can be run in "collaborative mode" by following instead the instructions
 in [Full-cycle collaborative workflow](./full-cycle-ci). In the collaborative version steps
 C-D below are performed by a collaborator.
 
 
-```{challenge} Exercise CI-1: Create and use a continuous integration workflow on GitHub or GitLab
+```{challenge} Exercise CI-1: Create and use a workflow on GitHub or a pipeline on GitLab
 
 In this exercise, we will:
 
