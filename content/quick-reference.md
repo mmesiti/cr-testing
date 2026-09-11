@@ -13,14 +13,15 @@ Integration test
 Smoke Test
   Check that the whole application/script runs without errors
   in the simplest scenario possible.
-  If this fails, no point in testing other things, usually.
+  If this fails, no point in testing other things, usually
 
 End-to-end test
   Test the whole thing running, checking the output 
   (For example, running on sample data
-  and checking that the output is  )
+  and checking that the output is the expected one - 
+  see also Regression test)
 
-Regression tests
+Regression test
   Check results are the same as before, typically written
   once a *regression* is detected 
   (a loss of functionality due to a bug).
@@ -29,9 +30,9 @@ Regression tests
   - Golden-Master Tests
   - Characterization Tests
   
-Characterization Tests
-  Test that are written on existing (legacy) code 
-  in order to have a test suite
+Characterization Test
+  Automated test that is written on existing (legacy) code 
+  and added to a test suite
   to make further work easier
 
 Test-first development
@@ -62,11 +63,18 @@ Continuous integration
 Code coverage
   Metric representing the fraction of your code base 
   executed during the test suite.
+  Note: this is an easy-to-game metric
+  and it is perfectly possible to write tests that are completely useless
+  but increase code coverage.
 
 Testing framework
   Framework that runs test for you.
   See the following for some examples.
 
+Linter
+  A program that can check your code 
+  for typical mistakes 
+  or for risky practices, and reports them to you.
 
 :::::
 

@@ -16,7 +16,7 @@ How can we avoid problems like these?
 
 ## What are typical problems that *automated* tests can address?
 
-Have you ever had some of these problems?
+Have you ever had any of these problems?
 
 - You change B and C, and suddenly A doesn't work anymore.  Time
   wasted trying to figure out what changed.
@@ -114,28 +114,37 @@ CORRECT
   - **Who is affected?**
 * - Breaking old functionality  
     when adding new features 
-  - {term}`End-to-End tests<End-to-end test>`
+  - {term}`End-to-End test`s
   - Developers
 * - Verify installation
-  - {term}`Smoke tests<Smoke Test>`
+  - {term}`Smoke test`s
   - Users
-* - Showing up-to-date example
-  - {term}`End-to-End tests<End-to-end test>`
-  - Users
-* - Improve readability and names 
-  - {term}`Unit tests<Unit test>`
+* - Make small incremental changes,  
+    Like improving readability, names
+  - {term}`Unit test`s
+  - Developers
+* - Make architectural changes,  
+    Like shifting code between  
+    classes, modules and functions
+  - {term}`Integration test`s  
+    {term}`End-to-End test`s
   - Developers
 * - Change things with confidence  
     that nothing is breaking
   - All tests
   - Developers
-* - Documentation out of date
+* - Documentation out of date  
+    including code examples
   - Executable notebooks  
     and [nbval](https://github.com/computationalmodelling/nbval),  
-    {term}`End-to-End tests<End-to-end test>`
+    {term}`End-to-End test`s
   - Users
 
 ```
+Very few people are proud of the code they write 
+the first time they write it.
+Code without automated tests cannot be improved as easily
+as code with automated tests.
 
 Moreover, **code that is easy to test is probably easier to maintain**,
 since it needs to be more modular and have better separation of concerns.
@@ -145,10 +154,9 @@ The [Modular code development](https://coderefinery.github.io/modular-type-along
   demonstrates this.
 
 ---
+## Discussion: When is it OK not to add automated tests?
 
-## Discussion: When is it OK not to add tests?
-
-```{discussion} Discussion: When is it OK not to add tests?
+::::{discussion} Discussion: When is it OK not to add automated tests?
 
 Vote in the notes and we'll discuss soon.  **It is always a balance: there is no "always"/"never"**.
 
@@ -158,26 +166,25 @@ Vote in the notes and we'll discuss soon.  **It is always a balance: there is no
 3. A simple short, "obviously correct" shell script?
 4. Can you give other examples?
 
-```
+:::{solution}
+The role of automated tests is to save time when making changes to code.
 
----
+1. In this case you just "test manually" the notebook by running it. Automated tests might not save you time. 
+   But if some non trivial functions are added, you might want to have automated {term}`unit test`s for these separately.
 
-## Discussion: What's easy and hard to test?
+2. Writing automated tests "Throwaway code" can be a waste of time. But if you get back to it, then you should think about writing automated tests for it.
 
-```{discussion} Discussion: Testing in practice
+3. "manual test" can be sufficient. In case of changes, checking the script with a {term}`linter` like [Shellcheck](https://www.shellcheck.net/) might still be useful!
 
-Use the collaborative notes to answer these questions:
+:::
 
-1. Give examples of things (from your work) that are easy to test.
-2. Give examples of things (from your work) that are hard to test.
-```
+::::
 
 ---
 
 
 ## What should you do?
 
-* Not every code needs perfect test coverage.
 
 * If code is interactive-only (Jupyter Notebook), it's usually hard to
   test.
@@ -202,13 +209,6 @@ Use the collaborative notes to answer these questions:
 
 ## Where to start
 
-- A simple script or notebook probably does not need an automated test.
-
-**If you have nothing yet**
-- Start with an end-to-end test.
-- Describe in words how *you* check whether the code still works.
-- Translate the words into a script.
-- Run the script automatically on every code change.
 
 **If you want to start with unit-testing**
 - You want to rewrite a function? Start adding a unit test right there first.
