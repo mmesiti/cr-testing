@@ -1,4 +1,4 @@
-# Automated testing in the Cloud 
+# Automated testing in the cloud 
 
 ```{questions}
 - How can we implement automatic testing each time we push changes to the repository?
@@ -15,6 +15,7 @@ GitLab CI - you can choose which one to use and instructions are provided for bo
 This exercise can be run in "collaborative mode" by following instead the instructions
 in [Full-cycle collaborative workflow](./full-cycle-ci). In the collaborative version steps
 C-D below are performed by a collaborator.
+```
 
 
 ```{challenge} Exercise CI-1: Create and use a workflow on GitHub or a pipeline on GitLab

@@ -7,7 +7,7 @@ We start discussing why automated testing is important.
 We then show how to set up automated testing in your projects
 in a few programming languages,
 so that you can run a test suite conveniently on your own computer.
-We will then show how to make GitHub (or GitLab)
+We will continue by showing how to have GitHub (or GitLab)
 run the test suite automatically
 (typically whenever someone pushes to the repository),
 and tell us when there was a problem.
@@ -19,7 +19,7 @@ to inform the code review process.
 
 Writing tests can be challenging sometimes,
 so we will discuss typical problems in test design,
-mentioning also *Test Driven Develpment*,
+mentioning also *Test Driven Development*,
 and practice designing and writing tests.
 
 The goals of the module

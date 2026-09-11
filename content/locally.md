@@ -1,4 +1,4 @@
-# Automated Testing on your computer 
+# Automated testing on your computer 
 
 ```{questions}
 - How hard is it to set up a test suite for a first unit test?
