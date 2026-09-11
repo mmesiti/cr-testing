@@ -1,4 +1,4 @@
-# Automated testing in the cloud 
+# Automated testing remotely
 
 ```{questions}
 - How can we implement automatic testing each time we push changes to the repository?
