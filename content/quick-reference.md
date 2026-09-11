@@ -1,5 +1,75 @@
 # Quick Reference
 
+## Glossary
+:::::{glossary} 
+
+Unit test
+  A test that covers a single functions or method
+  (a "unit")
+
+Integration test
+  A test that checks if "units" work together as intended
+
+Smoke Test
+  Check that the whole application/script runs without errors
+  in the simplest scenario possible.
+  If this fails, no point in testing other things, usually.
+
+End-to-end test
+  Test the whole thing running, checking the output 
+  (For example, running on sample data
+  and checking that the output is  )
+
+Regression tests
+  Check results are the same as before, typically written
+  once a *regression* is detected 
+  (a loss of functionality due to a bug).
+  Other names for the same kind of test:
+  - Acceptance Tests
+  - Golden-Master Tests
+  - Characterization Tests
+  
+Characterization Tests
+  Test that are written on existing (legacy) code 
+  in order to have a test suite
+  to make further work easier
+
+Test-first development
+  The practice of writing automated tests 
+  before writing the code that makes the tests pass
+
+Test-driven development
+  A special case of Test-First development 
+  where the workflow is 
+
+  - Make a list of specifications 
+
+  Then, for each specification:
+  - Write a test, and verify that the test fails
+  - Write the minimum amount of code to make the test pass
+  - Refactor and improve the code
+  
+
+Continuous integration
+  The practice of merging in the main branch frequently
+  without having long-lived branches.
+
+  This typically requires automating part of the workflow,
+  especially testing,
+  and GitHub/GitLab et similia have support for that
+  via Actions/CI-CD respectively.
+
+Code coverage
+  Metric representing the fraction of your code base 
+  executed during the test suite.
+
+Testing framework
+  Framework that runs test for you.
+  See the following for some examples.
+
+
+:::::
+
 ## Available tools
 
 ### Unit test frameworks

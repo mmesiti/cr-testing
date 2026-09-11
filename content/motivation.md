@@ -109,29 +109,30 @@ CORRECT
 
 ```{list-table} Problems, Solutions and who is affected?
 :widths: 40 30 30
-* - Problem
-  - Solution
-  - Who is affected?
+* - **Problem**
+  - **Solution**
+  - **Who is affected?**
 * - Breaking old functionality  
     when adding new features 
-  - End-to-End tests
+  - {term}`End-to-End tests<End-to-end test>`
   - Developers
 * - Verify installation
-  - Smoke tests 
+  - {term}`Smoke tests<Smoke Test>`
   - Users
 * - Showing up-to-date example
-  - End-to-End tests
+  - {term}`End-to-End tests<End-to-end test>`
   - Users
 * - Improve readability and names 
-  - Unit tests
+  - {term}`Unit tests<Unit test>`
   - Developers
-* - Refactor and restructure
+* - Change things with confidence  
+    that nothing is breaking
   - All tests
   - Developers
 * - Documentation out of date
   - Executable notebooks  
     and [nbval](https://github.com/computationalmodelling/nbval),  
-    End-to-End tests 
+    {term}`End-to-End tests<End-to-end test>`
   - Users
 
 ```
@@ -175,34 +176,6 @@ Use the collaborative notes to answer these questions:
 
 ---
 
-## Testing vocabulary
-
-* Test functions and methods one at a time - **Unit tests**
-
-* Test how parts work together - **Integration tests**
-
-* Test the whole thing running, checking the output - **End-to-end tests**
-  * For example, running on sample data.
-
-* Test that the whole thing runs in the simplest scenario possible - **Smoke Test**
-  * if this fails, no point in testing other things, usually.
-
-* Check results are the same as before - **Regression tests**
-  * Other names for the same thing: **Acceptance Tests**, **Golden-Master Tests**, **Characterization Tests**
-
-* Write test first (the output), then write code to make test pass -
-  **Test-driven development**
-
-* GitHub or GitLab runs tests automatically - **Continuous
-  integration**
-
-* Report that tells you which lines were/were not run by tests -
-  **Code coverage**
-
-* Framework that runs test for you - **Testing framework**
-  * See [Quick Reference](./quick-reference) for some examples.
-
----
 
 ## What should you do?
 
