@@ -137,13 +137,11 @@ CORRECT
 
 ```
 
-**Help other developers modify it**
-- Change things with confidence that nothing is breaking.
-- Warning if documentation/examples go out of date.
+Moreover, **code that is easy to test is probably easier to maintain**,
+since it needs to be more modular and have better separation of concerns.
 
-**Manage complexity**
-- If code is easy to test, it's probably easier to maintain.
-- The next lesson [Modular code development](https://coderefinery.github.io/modular-type-along/)
+
+The [Modular code development](https://coderefinery.github.io/modular-type-along/) lesson
   demonstrates this.
 
 ---
