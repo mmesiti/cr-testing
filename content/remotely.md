@@ -579,15 +579,28 @@ Finally, we discuss together about our experiences with this exercise.
 
 ## Where to go from here
 
-- This example was using Python but you can achieve the same automation for R or Fortran or C/C++ or other languages
-- This workflow is very useful for collaborators who work on the same code and it works both for
+**These techniques:**
+- **apply to all programming languages**:
+  This example was using Python but you can achieve the same automation for R or Fortran or C/C++ or other languages
+- **are recommended and useful for collaborative software develpment**: This workflow is very useful for collaborators who work on the same code and it works both for
   [centralized](https://coderefinery.github.io/git-collaborative/02-centralized/) and
   [forking](https://coderefinery.github.io/git-collaborative/03-distributed/) workflows - have a look at this
   [alternative exercise](./full-cycle-ci) to see how that works.
+  
+**There is more tooling available** to discover, for example:
+  
 - GitHub Actions has a [Marketplace](https://github.com/marketplace?type=actions) which offer wide range of automatic workflows
 - On GitLab use [GitLab CI](https://about.gitlab.com/product/continuous-integration/)
 - For Windows builds you can also use [Appveyor](https://www.appveyor.com)
 
+**About self-hosting**:
+- Note that this works also for self-hosted GitLab servers or GitHub Enterprise 
+  (i.e., not gitlab.com or github.com).
+  Your data does not have to go to a cloud!
+- It is also possible to run these workflows on a host
+  which is not the one where the repository is hosted 
+  (including a HPC system)
+  if you need more control on the running environment.
 
 ```{keypoints}
 - When fixing bugs or other problems reported in issues, use the issue
