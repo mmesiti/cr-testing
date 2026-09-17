@@ -8,10 +8,10 @@
 
 ## Exercise a full-cycle collaborative workflow
 
-This exercise is a collaborative version of the [Automated testing exercise](./continuous-integration).
+This exercise is a collaborative version of the [Automated testing exercise](./remotely).
 
 ```{exercise} FullCI-1: Create and use a continuous integration workflow on GitHub or GitLab with pull requests and issues
-This is an expanded version of the {doc}`automated testing demonstration <continuous-integration>`.
+This is an expanded version of the {doc}`automated testing demonstration on the cloud <remotely>`.
 The exercise is performed in a collaborative circle within the exercise group
 (breakout room).
 
@@ -342,6 +342,8 @@ Your goal:
 
 
 ```{keypoints}
+- GitHub Actions (and other services, like GitLab CI/CD pipelines) can be used to run automatically the test suite when pushing.
+- Setting up is usually done with YAML files. Every platform has their own syntax, but there are templates one can use.
 - When fixing bugs or other problems reported in issues, use the issue
   autoclosing mechanism when you send the pull/merge request.
 ```
