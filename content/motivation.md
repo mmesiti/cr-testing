@@ -52,60 +52,6 @@ With testing, simulations and analysis using software *can* be held to the same 
 
 ---
 
-## Testing in a nutshell
-
-In the most basic form of software tests, 
-expected results are compared with observed results
-in order to establish accuracy.  Why are we not comparing directly all
-digits with the expected result?
-
-````{tabs}
-   ```{group-tab} Python
-
-      ```{literalinclude} code/python/fahrenheit_to_celsius_test.py
-      :language: python
-      ```
-   ```
-
-   ```{group-tab} C++
-
-      ```{literalinclude} code/cpp/fahrenheit_to_celsius_test.cpp
-      :language: C++
-      ```
-   ```
-
-   ```{group-tab} R
-
-      ```{literalinclude} code/R/fahrenheit_to_celsius_test.R
-      :language: R
-      ```
-   ```
-
-   ```{group-tab} Julia
-
-      ```{literalinclude} code/julia/fahrenheit_to_celsius_test.jl
-      :language: Julia
-      ```
-   ```
-
-   ```{group-tab} Fortran
-
-      ```{literalinclude} code/fortran/fahrenheit_to_celsius_test.f90
-      :language: fortran
-      ```
-   ```
-````
-
-Or you can test whole programs:
-```console
-$ python3 run-test.py
-
-running: sample_data/set1.csv --output=tests/set1.txt
-CORRECT
-```
-
----
-
 ## What can tests help you do?
 
 ```{list-table} Problems, Solutions and who is affected?
@@ -155,6 +101,116 @@ The [Modular code development](https://coderefinery.github.io/modular-type-along
   demonstrates this.
 
 ---
+
+## Testing in a nutshell
+
+There are many forms of testing.
+
+One can write test programs and run them:
+```console
+$ python3 run-test.py
+
+running: sample_data/set1.csv --output=tests/set1.txt
+CORRECT
+```
+
+In the most basic form of a software test, 
+the observed result is compared with expected result (an "*oracle*")
+in order to establish correctness.  
+Here are some examples of this testing pattern 
+in different programming languages:
+
+````{tabs}
+   ```{group-tab} Python
+
+      ```{literalinclude} code/python/fahrenheit_to_celsius_test.py
+      :language: python
+      ```
+   ```
+
+   ```{group-tab} C++
+
+      ```{literalinclude} code/cpp/fahrenheit_to_celsius_test.cpp
+      :language: C++
+      ```
+   ```
+
+   ```{group-tab} R
+
+      ```{literalinclude} code/R/fahrenheit_to_celsius_test.R
+      :language: R
+      ```
+   ```
+
+   ```{group-tab} Julia
+
+      ```{literalinclude} code/julia/fahrenheit_to_celsius_test.jl
+      :language: Julia
+      ```
+   ```
+
+   ```{group-tab} Fortran
+
+      ```{literalinclude} code/fortran/fahrenheit_to_celsius_test.f90
+      :language: fortran
+      ```
+   ```
+````
+
+### Why use a testing framework?
+
+Automated testing typically requires to do a number of repetitive tasks
+and to solve some tricky problems.
+
+Fortunately for us, 
+someone has already found a solution for most of these
+and created {term}`testing framework`s that we can use
+(see [Unit test frameworks](./quick-reference.md#unit-test-frameworks)).
+
+Note: not all frameworks solve all problems 
+(also because sometimes the underlying language does not have the necessary features).
+
+```{list-table} Why use a testing framework?
+* - **Problem**
+  - **Solution**
+* - Rememer to run all the test you write  
+    in the main test script/program
+  - automatic discovery,  
+    automatic registration  
+    when declaring test functions
+* - Run only some tests  
+    (to save time)
+  - Test filtering  
+    via patterns
+* - Report failures/successes  
+    (to humans or other machines)
+  - Automated collection and output,  
+    (e.g., Junit XML format or [TAP](https://en.wikipedia.org/wiki/Test_Anything_Protocol))
+* - Provide useful information  
+    on why a test has failed
+  - "smart" assertions/macros
+* - Run same test for many  
+    known input/output combinations
+  - Parametric tests
+* - Check that a property holds  
+    for a class of inputs and outputs
+  - Automatically generate test cases  
+    based on a strategy  
+    (property testing)
+* - Debugging on failure 
+  - Start debugger on test failure
+* - Floating point equalities with tolerance
+  - macros/classes
+* - Set up and tear down complex test cases
+  - {term}`Fixture`s
+* - Estimate how much of your code  
+    is *run* in the test suite
+  - automatic {term}`code coverage` measurement
+```
+
+
+---
+
 ## Discussion: When is it OK not to add automated tests?
 
 ::::{discussion} Discussion: When is it OK not to add automated tests?
@@ -182,7 +238,6 @@ The role of automated tests is to save time when making changes to code.
 ::::
 
 ---
-
 
 ## What should you do?
 

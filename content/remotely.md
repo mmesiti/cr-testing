@@ -27,7 +27,7 @@ In this exercise, we will:
 - **C.** Find a bug in our repository and open an issue to report it
 - **D.** Fix the bug on a bugfix branch and open a pull request (GitHub)/ merge request (GitLab)
 - **E.** Merge the pull/merge request and see how the issue is automatically closed.
-- **F.** Create a test to increase the code coverage of our tests.
+- **F.** Create a test to increase the {term}`code coverage` of our tests.
 ```
 
 ## Prerequisites

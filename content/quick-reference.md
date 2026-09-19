@@ -11,37 +11,46 @@ Integration test
   A test that checks if "units" work together as intended
 
 Smoke Test
-  Check that the whole application/script runs without errors
+  Check that the whole application or script runs without errors
   in the simplest scenario possible.
   If this fails, no point in testing other things, usually
 
-End-to-end test
-  Test the whole thing running, checking the output 
-  (For example, running on sample data
-  and checking that the output is the expected one - 
-  see also Regression test)
 
+Regression
+  A loss of functionality, typically due to a bug
+
+End-to-end test
+  Test the whole thing running, checking the output
+  (For example, running on sample data
+  and checking that the output is the expected one.
+  See also {term}`Regression test<regression test>`)
+
+ 
 Regression test
-  Check results are the same as before, typically written
-  once a *regression* is detected 
-  (a loss of functionality due to a bug).
+
+  Check that results and behaviour are what they are supposed to be.
+  Typically written once a {term}`regression` is detected.
   Other names for the same kind of test:
+  - Characterization Tests
   - Acceptance Tests
   - Golden-Master Tests
-  - Characterization Tests
-  
+
 Characterization Test
-  Automated test that is written on existing (legacy) code 
+
+  Automated test that is written on existing (legacy) code,
+  (assuming that version of the code is correct)
   and added to a test suite
-  to make further work easier
+  to make further work/changes easier
 
 Test-first development
+
   The practice of writing automated tests 
   before writing the code that makes the tests pass
 
 Test-driven development
+
   A special case of Test-First development 
-  where the workflow is 
+  where the workflow is: 
 
   - Make a list of specifications 
 
@@ -52,29 +61,47 @@ Test-driven development
   
 
 Continuous integration
+
   The practice of merging in the main branch frequently
   without having long-lived branches.
-
   This typically requires automating part of the workflow,
   especially testing,
   and GitHub/GitLab et similia have support for that
   via Actions/CI-CD respectively.
 
 Code coverage
-  Metric representing the fraction of your code base 
-  executed during the test suite.
-  Note: this is an easy-to-game metric
+
+  Metric representing the fraction of code base 
+  executed during the test suite.  
+  Note: this is only an **upper bound**
+  to the fraction of code base 
+  that is anyhow tested.
   and it is perfectly possible to write tests that are completely useless
   but increase code coverage.
 
 Testing framework
+
   Framework that runs test for you.
   See the following for some examples.
 
 Linter
+
   A program that can check your code 
   for typical mistakes 
   or for risky practices, and reports them to you.
+
+Fixture
+  A resource that needs to be set up before a test case can run
+  and needs to be torn down after the test case 
+  (or a whole test suite) 
+  has run.
+
+Property testing
+  test that a property of the code holds
+  for a whole class of inputs.
+  Typically done by automatically generating
+  Typically very time-consuming 
+  compared to unit testing.
 
 :::::
 
@@ -359,10 +386,8 @@ You can then compile using this script:
 Each of these are web services to handle testing, free for open source
 projects.
 
-- [GitHub Actions](https://github.com/features/actions) (we will
-  demonstrate this in the next episode)
-- [GitLab CI](https://about.gitlab.com/features/gitlab-ci-cd/)
-  (we will demonstrate this in the next episode)
+- [GitHub Actions](https://github.com/features/actions) - see episode [Automated Testing Remotely](./remotely)
+- [GitLab CI](https://about.gitlab.com/features/gitlab-ci-cd/) - see episode [Automated Testing Remotely](./remotely)
 - [Azure Pipelines](https://azure.microsoft.com/en-us/services/devops/pipelines/)
 - [Coveralls](https://coveralls.io)
 - [Codecov](https://codecov.io)
