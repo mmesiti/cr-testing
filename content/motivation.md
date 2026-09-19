@@ -39,12 +39,14 @@ places it's useful for research code, and how easy it can be.
 
 ## Untested software can be compared to uncalibrated measurement devices 
 
-*"Before relying on a new experimental device, an experimental scientist always
+```{epigraph}
+*Before relying on a new experimental device, an experimental scientist always
 establishes its accuracy. A new detector is calibrated when the scientist
 observes its responses to known input signals. The results of this
-calibration are compared against the expected response."*
+calibration are compared against the expected response.*
 
-> [From [Testing and Continuous Integration with Python](https://carpentries-incubator.github.io/python-testing/), created by K. Huff]
+-- From [Testing and Continuous Integration with Python](https://carpentries-incubator.github.io/python-testing/), created by K. Huff
+```
 
 With testing, simulations and analysis using software *can* be held to the same standards as experimental measurement devices!
 
