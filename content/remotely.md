@@ -582,7 +582,7 @@ Finally, we discuss together about our experiences with this exercise.
 **These techniques:**
 - **apply to all programming languages**:
   This example was using Python but you can achieve the same automation for R or Fortran or C/C++ or other languages
-- **are recommended and useful for collaborative software develpment**: This workflow is very useful for collaborators who work on the same code and it works both for
+- **are recommended and useful for collaborative software development**: This workflow is very useful for collaborators who work on the same code and it works both for
   [centralized](https://coderefinery.github.io/git-collaborative/02-centralized/) and
   [forking](https://coderefinery.github.io/git-collaborative/03-distributed/) workflows - have a look at this
   [alternative exercise](./full-cycle-ci) to see how that works.
