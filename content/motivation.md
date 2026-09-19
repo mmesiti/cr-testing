@@ -5,8 +5,7 @@
 - Understand various benefits of testing
 ```
 
-Most scientists nowadays depend on software for research.
-
+Most scientists nowadays depend on software for research.  
 What can go wrong when research software has bugs?  Look no further:
 
 - [A Scientist's Nightmare: Software Problem Leads to Five Retractions](https://science.sciencemag.org/content/314/5807/1856.summary)
