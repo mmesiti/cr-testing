@@ -205,10 +205,4 @@ The role of automated tests is to save time when making changes to code.
 
 * **Learning how to test well make the rest of your code better, too.**
 
----
 
-## Where to start
-
-
-**If you want to start with unit-testing**
-- You want to rewrite a function? Start adding a unit test right there first.
