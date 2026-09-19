@@ -35,12 +35,12 @@ Learn one test framework well enough for basics:
 - Not every code needs perfect {term}`test coverage<code coverage>`. 
 - A simple script or notebook probably does not need an automated test.
 
-## Take the low-hanging fruits first
+## Pick the low-hanging fruits first
 
 You probably won't do everything perfectly when you start off... But
 what are some of the easy starting points?
 
-**If you have not got anything yet**:
+**If you have got nothing yet**:
 1. Start with an end-to-end test. 
   Typically easy to add, from a typical "manual" use case.
   This should match (or serve as) an **example in the code documentation** anyway.
