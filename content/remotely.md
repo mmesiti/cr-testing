@@ -589,18 +589,31 @@ Finally, we discuss together about our experiences with this exercise.
   
 **There is more tooling available** to discover, for example:
   
-- GitHub Actions has a [Marketplace](https://github.com/marketplace?type=actions) which offer wide range of automatic workflows
-- On GitLab use [GitLab CI](https://about.gitlab.com/product/continuous-integration/)
-- For Windows builds you can also use [Appveyor](https://www.appveyor.com)
+- GitHub Actions:
+  - has a [Marketplace](https://github.com/marketplace?type=actions) which offer wide range of composable actions 
+  - provides template *workflows* to start from
+  - Can execute *workflows* on on various [runners](https://docs.github.com/en/actions/concepts/runners/github-hosted-runners)
+- On GitLab the equivalent feature is named [GitLab CI/CD](https://about.gitlab.com/product/continuous-integration/)
+  - composability is achieved using so-called ["components"](https://gitlab.com/explore/catalog).
+  - Examples of typical *pipelines* are also [available](https://docs.gitlab.com/ci/examples/).
+  - Can execute *pipelines* on on various [runners](https://docs.gitlab.com/ci/runners/#gitlab-hosted-runners)
 
-**About self-hosting**:
-- Note that this works also for self-hosted GitLab servers or GitHub Enterprise 
+Both github.com and gitlab.com offer runners  on Linux, Windows and MacOS machines.
+
+
+If you need more control **About self-hosting**:
+- CI/CD and Actions are (typically) also available
+  for self-hosted GitLab servers or GitHub Enterprise 
   (i.e., not gitlab.com or github.com).
   Your data does not have to go to a cloud!
-- It is also possible to run these workflows on a host
-  which is not the one where the repository is hosted 
-  (including a HPC system)
-  if you need more control on the running environment.
+- If you need more control on the running environment,
+  you can also connect the git server 
+  to another host 
+  (including, e.g., a HPC system)
+  and run workflows/pipelines there,
+  with self-hosted runners 
+  (for [GitHub](https://docs.github.com/en/actions/concepts/runners/self-hosted-runners)
+  and for [GitLab](https://docs.gitlab.com/runner/)). 
 
 ```{keypoints}
 - When fixing bugs or other problems reported in issues, use the issue
