@@ -581,30 +581,53 @@ Finally, we discuss together about our experiences with this exercise.
 
 **These techniques:**
 - **apply to all programming languages**:
-  This example was using Python but you can achieve the same automation for R or Fortran or C/C++ or other languages
-- **are recommended and useful for collaborative software development**: This workflow is very useful for collaborators who work on the same code and it works both for
+  This example was using Python but you can achieve the same automation for any other languages
+- **are recommended and useful for collaborative software development**: 
+  automatically running the test suite remotely 
+  as presented here
+  is very useful for collaborators who work on the same code and it works both for
   [centralized](https://coderefinery.github.io/git-collaborative/02-centralized/) and
   [forking](https://coderefinery.github.io/git-collaborative/03-distributed/) workflows - have a look at this
   [alternative exercise](./full-cycle-ci) to see how that works.
   
 **There is more tooling available** to discover, for example:
-  
-- GitHub Actions:
-  - has a [Marketplace](https://github.com/marketplace?type=actions) which offer wide range of composable actions 
-  - provides template *workflows* to start from
-  - Can execute *workflows* on on various [runners](https://docs.github.com/en/actions/concepts/runners/github-hosted-runners)
-- On GitLab the equivalent feature is named [GitLab CI/CD](https://about.gitlab.com/product/continuous-integration/)
-  - composability is achieved using so-called ["components"](https://gitlab.com/explore/catalog).
-  - Examples of typical *pipelines* are also [available](https://docs.gitlab.com/ci/examples/).
-  - Can execute *pipelines* on on various [runners](https://docs.gitlab.com/ci/runners/#gitlab-hosted-runners)
+ 
+ 
+```{list-table} A jungle of tools
+* - **Feature**
+  - **GitHub**  
+    **Actions**
+  - **GitLab**  
+    **CI/CD**
+* - Composable actions
+  - [GitHub Marketplace](https://github.com/marketplace?type=actions),  
+    very mature ecosystem 
+  - [components](https://gitlab.com/explore/catalog)
+* - Defaults
+  - very minimal  
+    (checkout requires an action)
+  - typical use cases  
+    are "baked in" 
+* - Examples and templates
+  - Template workflows
+  - Some [Pipeline examples](https://docs.gitlab.com/ci/examples/)
+* - Execution 
+  - [GitHub-hosted Runners](https://docs.github.com/en/actions/concepts/runners/github-hosted-runners)  
+  - [GitLab-hosted Runners](https://docs.gitlab.com/ci/runners/#gitlab-hosted-runners)  
+* - Self-hosted  
+    execution
+  - [Self-hosted runners](https://docs.github.com/en/actions/how-tos/manage-runners/self-hosted-runners)
+  - [GitLab runner](https://docs.gitlab.com/runner/)  
+    (more customizable)
+```
 
-Both github.com and gitlab.com offer runners  on Linux, Windows and MacOS machines.
+Both GitHub Actions (on *github.com*) and GitLab CI/CD (on *gitlab.com*) offer runners  on Linux, Windows and MacOS machines.
 
 
-If you need more control **About self-hosting**:
-- CI/CD and Actions are (typically) also available
+If you need more control, you can choose to **self-host**:
+- CI/CD and Actions can also be made available
   for self-hosted GitLab servers or GitHub Enterprise 
-  (i.e., not gitlab.com or github.com).
+  (i.e., outside *gitlab.com* or *github.com* domains).
   Your data does not have to go to a cloud!
 - If you need more control on the running environment,
   you can also connect the git server 

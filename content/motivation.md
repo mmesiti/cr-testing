@@ -54,7 +54,7 @@ With testing, simulations and analysis using software *can* be held to the same 
 
 ## What can tests help you do?
 
-```{list-table} Problems, Solutions and who is affected?
+```{list-table} Problems, Solution and who is affected?
 :widths: 40 30 30
 * - **Problem**
   - **Solution**
@@ -171,41 +171,68 @@ Note: not all frameworks solve all problems
 (also because sometimes the underlying language does not have the necessary features).
 
 ```{list-table} Why use a testing framework?
+:widths: 40 40 20
 * - **Problem**
   - **Solution**
-* - Rememer to run all the test you write  
-    in the main test script/program
-  - automatic discovery,  
-    automatic registration  
-    when declaring test functions
-* - Run only some tests  
-    (to save time)
-  - Test filtering  
-    via patterns
+  - **Examples**
 * - Report failures/successes  
     (to humans or other machines)
   - Automated collection and output,  
     (e.g., Junit XML format or [TAP](https://en.wikipedia.org/wiki/Test_Anything_Protocol))
+  - Fundamental feature  
+    all testing frameworks  
+    have it.
+* - Remember to run all the test you write  
+    in the main test script/program
+  - Automatic discovery,  
+    automatic {term}`registration<test registration>`  
+    when declaring test functions
+  - [Pytest](https://docs.pytest.org/en/stable/)
+* - Run only some tests  
+    (to save time)
+  - Test filtering  
+    via patterns
+  -
 * - Provide useful information  
     on why a test has failed
-  - "smart" assertions/macros
+  - "Smart" assertions/macros
+  - [in pytest](https://docs.pytest.org/en/stable/how-to/assert.html#assert),  
+    [in GoogleTest](https://google.github.io/googletest/primer.html#assertions)
 * - Run same test for many  
     known input/output combinations
   - Parametric tests
+  - [In Pytest](https://docs.pytest.org/en/stable/how-to/parametrize.html#pytest-mark-parametrize-parametrizing-test-functions),  
+    [in Julia](https://docs.julialang.org/en/v1/stdlib/Test/#Working-with-Test-Sets) (see `testset for`)
 * - Check that a property holds  
     for a class of inputs and outputs
   - Automatically generate test cases  
     based on a strategy  
     (property testing)
+  - [hypothesis](https://hypothesis.readthedocs.io/en/latest/tutorial/introduction.html)  
+    (python)
 * - Debugging on failure 
   - Start debugger on test failure
+  - `pytest --pdb`
 * - Floating point equalities with tolerance
-  - macros/classes
+  - Macros/classes
+  - `≈` (julia), `pytest.approx` 
 * - Set up and tear down complex test cases
   - {term}`Fixture`s
+  - [In pytest](https://docs.pytest.org/en/stable/explanation/fixtures.html),  
+    [in GoogleTest](https://google.github.io/googletest/primer.html#same-data-multiple-tests)
 * - Estimate how much of your code  
     is *run* in the test suite
-  - automatic {term}`code coverage` measurement
+  - Automatic {term}`coverage<code coverage>`  
+    measurement
+  - [Pytest-cov](https://pytest-cov.readthedocs.io/en/latest/),  
+    [gcov/lcov](https://wiki.cs.jmu.edu/reference/gcov/)  
+    (for C/C++/Fortran)
+* - Will my code work  
+    with different versions  
+    of the dependencies?
+  - Test in different environments
+  - [Tox](https://tox.wiki/en), [nox](https://nox.thea.codes/en/stable/index.html)  
+    (python)
 ```
 
 
@@ -229,9 +256,9 @@ The role of automated tests is to save time when making changes to code.
 1. In this case you just "test manually" the notebook by running it. Automated tests might not save you time. 
    But if some non trivial functions are added, you might want to have automated {term}`unit test`s for these separately.
 
-2. Writing automated tests "Throwaway code" can be a waste of time. But if you get back to it, then you should think about writing automated tests for it.
+2. Writing automated tests for "throwaway code" can be a waste of time. But if you get back to it, then you should think about writing automated tests for it.
 
-3. "manual test" can be sufficient. In case of changes, checking the script with a {term}`linter` like [Shellcheck](https://www.shellcheck.net/) might still be useful!
+3. "Manual test" can be sufficient. In case of changes, checking the script with a {term}`linter` like [Shellcheck](https://www.shellcheck.net/) might still be useful!
 
 :::
 
@@ -245,7 +272,7 @@ The role of automated tests is to save time when making changes to code.
 * If code is interactive-only (Jupyter Notebook), it's usually hard to
   test.
 
-  * But also hard to run: the next lesson will discuss!
+  * But also hard to run: the [next lesson](https://coderefinery.github.io/modular-type-along/) will discuss!
 
 * At least end-to-end is often easy to add.
 
@@ -257,7 +284,7 @@ The role of automated tests is to save time when making changes to code.
 * It's easy to have Gitlab/Github run the tests.
 
   * It's nice to push without thinking, and the system tells you when
-    it's broke.
+    it's broken.
 
 * **Learning how to test well make the rest of your code better, too.**
 

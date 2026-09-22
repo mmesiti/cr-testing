@@ -47,7 +47,8 @@ Test-first development
   The practice of writing automated tests 
   before writing the code that makes the tests pass
 
-Test-driven development
+TDD
+  Test-driven development
 
   A special case of Test-First development 
   where the workflow is: 
@@ -76,12 +77,12 @@ Code coverage
   Note: this is only an **upper bound**
   to the fraction of code base 
   that is anyhow tested.
-  and it is perfectly possible to write tests that are completely useless
+  And it is perfectly possible to write tests that are completely useless
   but increase code coverage.
 
 Testing framework
 
-  Framework that runs test for you.
+  Framework that runs tests for you.
   See the following for some examples.
 
 Linter
@@ -100,8 +101,19 @@ Property testing
   test that a property of the code holds
   for a whole class of inputs.
   Typically done by automatically generating
-  Typically very time-consuming 
+  test cases according to a strategy.
+  Tends to very time-consuming 
   compared to unit testing.
+  
+Test Registration
+  The act of marking a test for execution 
+  in a main testing program. 
+  Test frameworks allow to do this
+  automatically
+  at test definition
+  so that it does not have to be manually invoked 
+  in the "main" script/function,
+  with the risk of forgetting it.
 
 :::::
 
