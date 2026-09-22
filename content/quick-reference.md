@@ -48,17 +48,18 @@ Test-first development
   before writing the code that makes the tests pass
 
 TDD
-  Test-driven development
+  Acronym for {term}`Test-driven development`
 
+Test-driven development
   A special case of Test-First development 
   where the workflow is: 
 
-  - Make a list of specifications 
+  - Make a list of specifications
 
-  Then, for each specification:
-  - Write a test, and verify that the test fails
-  - Write the minimum amount of code to make the test pass
-  - Refactor and improve the code
+  - Then, for each specification:
+    - Write a test, run it and verify that the test fails
+    - Write the minimum amount of code to make the test pass
+    - Refactor and improve the code
   
 
 Continuous integration

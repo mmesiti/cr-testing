@@ -27,7 +27,9 @@ after attending this lesson.
 
 Learn one test framework well enough for basics:
 - Explore and use the good tools that exist out there
-- An incomplete list of testing frameworks can be found in the [Quick Reference](quick-reference)
+- An incomplete list of {term}`testing framework`s 
+  can be found in the [Quick Reference](quick-reference)
+  (see [Unit test frameworks](./quick-reference.md#unit-test-frameworks)).
 
 ### Why use a testing framework?
 
@@ -37,7 +39,6 @@ and to solve some tricky problems.
 Fortunately for us, 
 someone has already found a solution for most of these
 and created {term}`testing framework`s that we can use
-(see [Unit test frameworks](./quick-reference.md#unit-test-frameworks)).
 
 Note: not all frameworks solve all problems 
 (also because sometimes the underlying language does not have the necessary features).
@@ -100,6 +101,12 @@ Note: not all frameworks solve all problems
   - [Pytest-cov](https://pytest-cov.readthedocs.io/en/latest/),  
     [gcov/lcov](https://wiki.cs.jmu.edu/reference/gcov/)  
     (for C/C++/Fortran)
+* - Do code examples in documentation  
+    work as expected?
+  - doctests
+  - [Python](https://docs.python.org/3/library/doctest.html),  
+    [Julia](https://documenter.juliadocs.org/stable/man/doctests/),
+    [R](https://cran.r-project.org/web/packages/doctest/vignettes/doctest.html)
 * - Will my code work  
     with different versions  
     of the dependencies?
