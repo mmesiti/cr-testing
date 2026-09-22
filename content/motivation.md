@@ -109,7 +109,7 @@ The [Modular code development lesson](https://coderefinery.github.io/modular-typ
 
 There are many forms of testing.
 
-One can write test programs and run them:
+One can write test programs and run them (a form of {term}`end-to-end test`):
 ```console
 $ python3 run-test.py
 
@@ -121,7 +121,7 @@ In the most basic form of a software test,
 the observed result is compared with expected result (an "*oracle*")
 in order to establish correctness.  
 Here are some examples of this testing pattern 
-in different programming languages:
+in different programming languages (in this case, {term}`unit test`s):
 
 ````{tabs}
    ```{group-tab} Python
