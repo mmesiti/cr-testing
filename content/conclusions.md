@@ -155,6 +155,7 @@ what are some of the easy starting points?
 - When you discover and fix a bug, also commit a test against this bug
 - Use {term}`code coverage` analysis to identify untested or unused code.
   Remember [Goodhart's Law](https://en.wikipedia.org/wiki/Goodhart%27s_law)
-- If you make your code easier to test, it becomes more modular
+- If you make your code easier to test, it becomes more modular (and vice versa - see the [modular code development lesson](https://coderefinery.github.io/modular-type-along/))
+  
 - **Learning how to test well make the rest of your code better, too.**
 
