@@ -29,6 +29,85 @@ Learn one test framework well enough for basics:
 - Explore and use the good tools that exist out there
 - An incomplete list of testing frameworks can be found in the [Quick Reference](quick-reference)
 
+### Why use a testing framework?
+
+Automated testing typically requires to do a number of repetitive tasks
+and to solve some tricky problems.
+
+Fortunately for us, 
+someone has already found a solution for most of these
+and created {term}`testing framework`s that we can use
+(see [Unit test frameworks](./quick-reference.md#unit-test-frameworks)).
+
+Note: not all frameworks solve all problems 
+(also because sometimes the underlying language does not have the necessary features).
+
+```{list-table} Why use a testing framework?
+:widths: 40 40 20
+* - **Typical problem**
+  - **Solution**
+  - **Examples**
+* - Report failures/successes  
+    (to humans or other machines)  
+    consistently
+  - Automated collection and output,  
+    (e.g., Junit XML format or [TAP](https://en.wikipedia.org/wiki/Test_Anything_Protocol))
+  - Fundamental feature  
+    all testing frameworks  
+    have it.
+* - Remember to run all the test you write  
+    in the main test script/program
+  - Automatic discovery,  
+    automatic {term}`registration<test registration>`  
+    when declaring test functions
+  - [Pytest](https://docs.pytest.org/en/stable/)
+* - Run only some tests  
+    (to save time)
+  - Test filtering  
+    via patterns
+  -
+* - Provide useful information  
+    on why a test has failed
+  - "Smart" assertions/macros
+  - [in pytest](https://docs.pytest.org/en/stable/how-to/assert.html#assert),  
+    [in GoogleTest](https://google.github.io/googletest/primer.html#assertions)
+* - Run same test for many  
+    known input/output combinations
+  - Parametric tests
+  - [In Pytest](https://docs.pytest.org/en/stable/how-to/parametrize.html#pytest-mark-parametrize-parametrizing-test-functions),  
+    [in Julia](https://docs.julialang.org/en/v1/stdlib/Test/#Working-with-Test-Sets) (see `testset for`)
+* - Check that a property holds  
+    for a class of inputs and outputs
+  - Automatically generate test cases  
+    based on a strategy  
+    (property testing)
+  - [hypothesis](https://hypothesis.readthedocs.io/en/latest/tutorial/introduction.html)  
+    (python)
+* - Debugging on failure 
+  - Start debugger on test failure
+  - `pytest --pdb`
+* - Floating point equalities with tolerance
+  - Macros/classes
+  - `≈` (julia), `pytest.approx` 
+* - Set up and tear down complex test cases
+  - {term}`Fixture`s
+  - [In pytest](https://docs.pytest.org/en/stable/explanation/fixtures.html),  
+    [in GoogleTest](https://google.github.io/googletest/primer.html#same-data-multiple-tests)
+* - Estimate how much of your code  
+    is *run* in the test suite
+  - Automatic {term}`coverage<code coverage>`  
+    measurement
+  - [Pytest-cov](https://pytest-cov.readthedocs.io/en/latest/),  
+    [gcov/lcov](https://wiki.cs.jmu.edu/reference/gcov/)  
+    (for C/C++/Fortran)
+* - Will my code work  
+    with different versions  
+    of the dependencies?
+  - Test in different environments
+  - [Tox](https://tox.wiki/en), [nox](https://nox.thea.codes/en/stable/index.html)  
+    (python)
+```
+
 
 ## Don't over-test
 
