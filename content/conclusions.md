@@ -47,13 +47,15 @@ Note: not all frameworks solve all problems
 * - **Typical problem**
   - **Solution**
   - **Examples**
-* - Report failures/successes consistently
+* - Report failures/successes  
+    consistently  
     (to humans or other machines)
   - Automated collection and output,  
     (e.g., Junit XML format or [TAP](https://en.wikipedia.org/wiki/Test_Anything_Protocol))
-  - Fundamental feature that
+  - Fundamental feature that  
     all testing frameworks have
-* - Remember to run all the tests you write  
+* - Remember to run  
+    all the tests you write  
     in the main test script/program
   - Automatic discovery,  
     automatic {term}`registration<test registration>`  
@@ -84,10 +86,12 @@ Note: not all frameworks solve all problems
 * - Debugging on failure 
   - Start debugger on test failure
   - `pytest --pdb`
-* - Floating point equalities with tolerance
+* - Floating point equalities  
+    with tolerance
   - Macros/classes
   - `≈` (Julia), `pytest.approx` 
-* - Set up and tear down complex test cases
+* - Set up and tear down  
+    of complex test cases
   - {term}`Fixture`s
   - [pytest](https://docs.pytest.org/en/stable/explanation/fixtures.html),  
     [GoogleTest](https://google.github.io/googletest/primer.html#same-data-multiple-tests)
@@ -98,7 +102,8 @@ Note: not all frameworks solve all problems
   - [Pytest-cov](https://pytest-cov.readthedocs.io/en/latest/),  
     [gcov/lcov](https://wiki.cs.jmu.edu/reference/gcov/)  
     (for C/C++/Fortran)
-* - Do code examples in documentation  
+* - Do code examples  
+    in documentation  
     work as expected?
   - Documentation tests  
     (doctests)
