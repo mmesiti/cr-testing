@@ -593,7 +593,7 @@ Finally, we discuss together about our experiences with this exercise.
 **There is more tooling available** to discover, for example:
  
  
-```{list-table} A jungle of tools
+```{list-table} Features and implementations on GitHub Actions and GitLab CI/CD 
 * - **Feature**
   - **GitHub**  
     **Actions**
@@ -624,13 +624,13 @@ Finally, we discuss together about our experiences with this exercise.
 Both GitHub Actions (on *github.com*) and GitLab CI/CD (on *gitlab.com*) offer runners  on Linux, Windows and MacOS machines.
 
 
-If you need more control, you can choose to **self-host**:
+If you need more control, you can **self-host**:
 - CI/CD and Actions can also be made available
   for self-hosted GitLab servers or GitHub Enterprise 
   (i.e., outside *gitlab.com* or *github.com* domains).
   Your data does not have to go to a cloud!
 - If you need more control on the running environment,
-  you can also connect the git server 
+  you can connect the git server 
   to another host 
   (including, e.g., a HPC system)
   and run workflows/pipelines there,
