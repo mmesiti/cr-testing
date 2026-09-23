@@ -26,19 +26,19 @@ after attending this lesson.
 ## The basics: what knowledge do you need?
 
 Learn one test framework well enough for basics:
-- Explore and use the good tools that exist out there
+- Explore and use the good tools that exist out there.
 - An incomplete list of {term}`testing framework`s 
   can be found in the [Quick Reference](quick-reference)
   (see [Unit test frameworks](./quick-reference.md#unit-test-frameworks)).
 
 ### Why use a testing framework?
 
-Automated testing typically requires to do a number of repetitive tasks
-and to solve some tricky problems.
+Automated testing typically involves a number of repetitive tasks
+and tricky problem solving.
 
 Fortunately for us, 
 someone has already found a solution for most of these
-and created {term}`testing framework`s that we can use
+and created {term}`testing framework`s that we can use.
 
 Note: not all frameworks solve all problems 
 (also because sometimes the underlying language does not have the necessary features).
@@ -48,52 +48,50 @@ Note: not all frameworks solve all problems
 * - **Typical problem**
   - **Solution**
   - **Examples**
-* - Report failures/successes  
-    (to humans or other machines)  
-    consistently
+* - Report failures/successes consistently
+    (to humans or other machines)
   - Automated collection and output,  
     (e.g., Junit XML format or [TAP](https://en.wikipedia.org/wiki/Test_Anything_Protocol))
-  - Fundamental feature  
-    all testing frameworks  
-    have it.
-* - Remember to run all the test you write  
+  - Fundamental feature that
+    all testing frameworks have
+* - Remember to run all the tests you write  
     in the main test script/program
   - Automatic discovery,  
     automatic {term}`registration<test registration>`  
     when declaring test functions
-  - [Pytest](https://docs.pytest.org/en/stable/)
+  - [pytest](https://docs.pytest.org/en/stable/)
 * - Run only some tests  
     (to save time)
   - Test filtering  
     via patterns
-  -
+  - [pytest](https://docs.pytest.org/en/stable/how-to/usage.html#specifying-which-tests-to-run)
 * - Provide useful information  
     on why a test has failed
   - "Smart" assertions/macros
-  - [in pytest](https://docs.pytest.org/en/stable/how-to/assert.html#assert),  
-    [in GoogleTest](https://google.github.io/googletest/primer.html#assertions)
+  - [pytest](https://docs.pytest.org/en/stable/how-to/assert.html#assert), 
+    [GoogleTest](https://google.github.io/googletest/primer.html#assertions)
 * - Run same test for many  
     known input/output combinations
   - Parametric tests
-  - [In Pytest](https://docs.pytest.org/en/stable/how-to/parametrize.html#pytest-mark-parametrize-parametrizing-test-functions),  
-    [in Julia](https://docs.julialang.org/en/v1/stdlib/Test/#Working-with-Test-Sets) (see `testset for`)
+  - [pytest](https://docs.pytest.org/en/stable/how-to/parametrize.html#pytest-mark-parametrize-parametrizing-test-functions),  
+    [Julia](https://docs.julialang.org/en/v1/stdlib/Test/#Working-with-Test-Sets) (see `testset for`)
 * - Check that a property holds  
     for a class of inputs and outputs
   - Automatically generate test cases  
     based on a strategy  
     (property testing)
   - [hypothesis](https://hypothesis.readthedocs.io/en/latest/tutorial/introduction.html)  
-    (python)
+    (Python)
 * - Debugging on failure 
   - Start debugger on test failure
   - `pytest --pdb`
 * - Floating point equalities with tolerance
   - Macros/classes
-  - `≈` (julia), `pytest.approx` 
+  - `≈` (Julia), `pytest.approx` 
 * - Set up and tear down complex test cases
   - {term}`Fixture`s
-  - [In pytest](https://docs.pytest.org/en/stable/explanation/fixtures.html),  
-    [in GoogleTest](https://google.github.io/googletest/primer.html#same-data-multiple-tests)
+  - [pytest](https://docs.pytest.org/en/stable/explanation/fixtures.html),  
+    [GoogleTest](https://google.github.io/googletest/primer.html#same-data-multiple-tests)
 * - Estimate how much of your code  
     is *run* in the test suite
   - Automatic {term}`coverage<code coverage>`  
@@ -103,7 +101,8 @@ Note: not all frameworks solve all problems
     (for C/C++/Fortran)
 * - Do code examples in documentation  
     work as expected?
-  - doctests
+  - Documentation tests  
+    (doctests)
   - [Python](https://docs.python.org/3/library/doctest.html),  
     [Julia](https://documenter.juliadocs.org/stable/man/doctests/),
     [R](https://cran.r-project.org/web/packages/doctest/vignettes/doctest.html)
@@ -111,8 +110,8 @@ Note: not all frameworks solve all problems
     with different versions  
     of the dependencies?
   - Test in different environments
-  - [Tox](https://tox.wiki/en), [nox](https://nox.thea.codes/en/stable/index.html)  
-    (python)
+  - [tox](https://tox.wiki/en), [Nox](https://nox.thea.codes/en/stable/index.html)  
+    (Python)
 ```
 
 
@@ -128,11 +127,11 @@ what are some of the easy starting points?
 
 **If you have got nothing yet**:
 1. Start with an end-to-end test. 
-  Typically easy to add, from a typical "manual" use case.
+  Typically easy to add, from a "manual" use case.
   This should match (or serve as) an **example in the code documentation** anyway.
   - Describe in words how *you* check whether the code still works.
   - Translate the words into a script.
-  - Run the script as often as reasonable 
+  - Run the script as often as reasonable.
 
 2. Do you have some single functions that are easy to test, but hard to
   verify just by looking at them?  Add unit tests.
@@ -142,20 +141,19 @@ what are some of the easy starting points?
   if you break things.  It's actually pretty freeing.
 
 **If you need to start modifying some existing code:**
-1. Add a {term}`characterization test` for the part of the code you need to change
-2. Add tests for any functionality you intend to add
+1. Add a {term}`characterization test` for the part of the code you need to change.
+2. Add tests for any functionality you intend to add.
 3. Consider adding some end-to-end tests for the use case you have in mind.
 
 ## Going more in-depth
 
-- Strike a healthy balance between unit tests and integration tests
+- Strike a healthy balance between unit tests and integration tests.
 - As the code gets larger and the chance of undetected bugs
-  increases, tests should increase
-- When adding new functionality, also add tests
-- When you discover and fix a bug, also commit a test against this bug
+  increases, tests should increase.
+- When adding new functionality, also add tests.
+- When you discover and fix a bug, also commit a test against this bug.
 - Use {term}`code coverage` analysis to identify untested or unused code.
-  Remember [Goodhart's Law](https://en.wikipedia.org/wiki/Goodhart%27s_law)
-- If you make your code easier to test, it becomes more modular (and vice versa - see the [modular code development lesson](https://coderefinery.github.io/modular-type-along/))
-  
+  Remember [Goodhart's Law](https://en.wikipedia.org/wiki/Goodhart%27s_law).
+- If you make your code easier to test, it becomes more modular (and vice versa - see the [modular code development lesson](https://coderefinery.github.io/modular-type-along/)).
 - **Learning how to test well make the rest of your code better, too.**
 

@@ -92,7 +92,7 @@ With testing, simulations and analysis using software *can* be held to the same 
 Very few people are proud of the code they write 
 the first time they write it.
 
-Typically, they'd like to improve it.
+Often, they'd like to improve it.
 
 But code without automated tests cannot be improved as easily
 as code with automated tests.
@@ -109,7 +109,7 @@ The [Modular code development lesson](https://coderefinery.github.io/modular-typ
 
 There are many forms of testing.
 
-One can write test programs and run them (a form of {term}`end-to-end test`):
+One can write test programs and run them (a form of {term}`end-to-end test`ing):
 ```console
 $ python3 run-test.py
 

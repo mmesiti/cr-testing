@@ -602,18 +602,18 @@ Finally, we discuss together about our experiences with this exercise.
 * - Composable actions
   - [GitHub Marketplace](https://github.com/marketplace?type=actions),  
     very mature ecosystem 
-  - [components](https://gitlab.com/explore/catalog)
+  - [Components](https://gitlab.com/explore/catalog)
 * - Defaults
-  - very minimal  
+  - Very minimal  
     (checkout requires an action)
-  - typical use cases  
+  - Typical use cases  
     are "baked in" 
 * - Examples and templates
   - Template workflows
   - Some [Pipeline examples](https://docs.gitlab.com/ci/examples/)
 * - Execution 
-  - [GitHub-hosted Runners](https://docs.github.com/en/actions/concepts/runners/github-hosted-runners)  
-  - [GitLab-hosted Runners](https://docs.gitlab.com/ci/runners/#gitlab-hosted-runners)  
+  - [GitHub-hosted runners](https://docs.github.com/en/actions/concepts/runners/github-hosted-runners)  
+  - [GitLab-hosted runners](https://docs.gitlab.com/ci/runners/#gitlab-hosted-runners)  
 * - Self-hosted  
     execution
   - [Self-hosted runners](https://docs.github.com/en/actions/how-tos/manage-runners/self-hosted-runners)

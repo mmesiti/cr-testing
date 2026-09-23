@@ -25,7 +25,6 @@ End-to-end test
   and checking that the output is the expected one.
   See also {term}`Regression test<regression test>`)
 
- 
 Regression test
 
   Check that results and behaviour are what they are supposed to be.
@@ -99,13 +98,12 @@ Fixture
   has run.
 
 Property testing
-  test that a property of the code holds
+  Test that a property of the code holds
   for a whole class of inputs.
   Typically done by automatically generating
   test cases according to a strategy.
   Tends to very time-consuming 
   compared to unit testing.
-  
 Test Registration
   The act of marking a test for execution 
   in a main testing program. 
