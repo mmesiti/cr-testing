@@ -25,11 +25,10 @@ after attending this lesson.
 
 ## The basics: what knowledge do you need?
 
-Learn one test framework well enough for basics:
+Learn one {term}`testing framework` well enough for basics:
 - Explore and use the good tools that exist out there.
-- An incomplete list of {term}`testing framework`s 
-  can be found in the [Quick Reference](quick-reference)
-  (see [Unit test frameworks](#unit-test-frameworks)).
+- An incomplete list of testing frameworks 
+  can be found [here](#unit-test-frameworks).
 
 ### Why use a testing framework?
 
