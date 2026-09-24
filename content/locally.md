@@ -277,7 +277,7 @@ how do we test them?
 
 `````````{challenge} (optional) Local-2: Create a test that considers numerical tolerance (10 min)
 Let's see an example where the test has to be more clever in order to
-avoid false negative.
+avoid false positive.
 
 In the above exercise we have compared integers.  In this optional exercise we
 want to learn how to compare floating point numbers since they are more tricky
