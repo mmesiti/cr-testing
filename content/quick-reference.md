@@ -115,6 +115,17 @@ Test Registration
   in the "main" script/function,
   with the risk of forgetting it.
 
+Test Pyramid
+  The general approach for balancing test types
+  in a test suite.
+  The slower a test type is,
+  the fewere tests of that type 
+  should be in the test suite.
+  
+  Search engines can show many representations of this.
+  
+  
+  
 :::::
 
 ## Available tools

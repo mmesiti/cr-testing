@@ -151,13 +151,24 @@ what are some of the easy starting points?
 
 ## Going more in-depth
 
-- Strike a healthy balance between unit tests and integration tests.
-- As the code gets larger and the chance of undetected bugs
-  increases, tests should increase.
-- When adding new functionality, also add tests.
-- When you discover and fix a bug, also commit a test against this bug.
+**With time**:
+- The code gets larger, 
+  the chance of undetected bugs increases, 
+  tests should increase.
+- Bugs will be found. When you find them, add tests against those.
+
+
+**How to improve your code:**
 - Use {term}`code coverage` analysis to identify untested or unused code.
   Remember [Goodhart's Law](https://en.wikipedia.org/wiki/Goodhart%27s_law).
+- Strike a healthy balance between different kinds of tests:
+  - Fast tests give you information quicker but can be shallow;
+  - Thorough tests can catch more bugs but take longer to run
+    and can be brittle.
+  
+  The {term}`test pyramid` 
+  is a recommended strategy to balance between test types.
+
 - If you make your code easier to test, it becomes more modular (and vice versa - see the [modular code development lesson](https://coderefinery.github.io/modular-type-along/)).
 - **Learning how to test well make the rest of your code better, too.**
 
