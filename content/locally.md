@@ -5,7 +5,7 @@
 ```
 
 
-## Exercise 
+## Setting up your first automated test 
 
 
 In this exercise we will make a simple function and use
@@ -266,6 +266,14 @@ whether our test detects the change:
   ``````
 ```````
 `````````
+
+## Numerical Tolerances
+
+Some times the testing logic needs to be slightly more complicated.
+In scientific computing
+many functions return floating point numbers:
+how do we test them?
+
 
 `````````{challenge} (optional) Local-2: Create a test that considers numerical tolerance (10 min)
 Let's see an example where the test has to be more clever in order to
